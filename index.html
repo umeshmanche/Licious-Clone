@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- googlr fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css links -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/large_screen.css">
+    <link rel="stylesheet" href="./css/medium_screen.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+
+    <title>Licious Clone</title>
+</head>
+<body >
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="./images/licious-logo.svg" alt="logo" class="logo">
+                </div>
+                
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <button class="location-btn" onclick="updateLocation()">Location</button>
+                </div>
+    
+                <div class="search-bar">
+                    <input type="text" id="search" class="search" placeholder="search...">
+                    <i class="fa fa-search"></i>
+                </div>
+    
+                <div class="categories">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <button class="categories-btn" id="categories">Categories</button>
+                </div>
+    
+                <div class="login">
+                    <i class="fa-solid fa-user"></i>
+                    <button class="login-btn" id="login">Login</button>
+                </div>
+                
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <button id="cart-btn" class="cart-btn">Cart</button>
+                </div>
+                <div class="non-empty-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <button id="cart-btn" onclick="appendCartItems()" class="cart-btn">
+                        <ul>
+                            <li class="items"><span class="count">0</span> Items</li>
+                            <li class="total-price">₹<span class="amount">0</span></li>
+                        </ul>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <div class="cart-items">
+            <div class="cart-list">
+                <ul class="items-list" id="items-list">
+                    
+                </ul>
+                
+            </div>
+            
+        </div>
+        <div class="container-2" >
+            <div class="main-container">
+                <div class="banner">
+                    <img src="./images/banner.jpeg" alt="banner image" class="banner-bg">
+                </div>
+            </div>
+            <div class="shop-by-best-sellers-now">
+                <div class="back">
+                    <i class="fa-solid fa-arrow-left" onclick="shopBestSellersNow()"></i>
+                    <h2 class="heading">
+                        <button class="back-btn" onclick="shopBestSellersNow()">Shop Bestsellers Now</button>
+                        <i class="fa-solid fa-circle-chevron-down menu-btn" onclick="manageDropDown()"></i>
+                    </h2>
+                </div>
+                <div class="search">
+                    <button class="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="category" id="drop-down">
+                <h3 class="heading categories-heading">Shop by categories</h3>
+                <p class="sub-heading category-tag">Freshest meats and much more!</p>
+                <ul>
+                    <li><img src="./images/shop-by-categories/Todays_Deal_1.png" alt="today's deals">Today's Deals</li>
+                    <li><img src="./images/shop-by-categories/Chicken.png" alt="chicken">Chicken</li>
+                    <li><img src="./images/shop-by-categories/Fish_(1).png" alt="fish and seafood">Fish & Seafood</li>
+                    <li><img src="./images/shop-by-categories/Mutton.png" alt="mutton">Mutton</li>
+                    <li><img src="./images/shop-by-categories/reaady-to-cook.png" alt="ready to cook">Ready to Cook</li>
+                    <li><img src="./images/shop-by-categories/Prawns.png" alt="prawns">Prawns</li>
+                    <li><img src="./images/shop-by-categories/Coldcuts.png" alt="cold cuts">Cold Cuts</li>
+                    <li><img src="./images/shop-by-categories/spreads.png" alt="spreads">Spreads</li>
+                    <li><img src="./images/shop-by-categories/Eggs.png" alt="eggs">Eggs</li>
+                    <li><img src="./images/shop-by-categories/Biryani-and-kebab.png" alt="biryani and kebeb">Biryani & Kebab</li>
+                    <li><img src="./images/shop-by-categories/plant-based-meat.png" alt="plant based meat">Plant Based Meat</li>
+                    <li><img src="./images/shop-by-categories/meat-masala.png" alt="meat masala">Meat Masala</li>
+                </ul>
+            </div>
+            <div class="cards best-sellers">
+                <h3 class="heading">Bestsellers</h3>
+                <p class="sub-heading">Most popular products near you!</p>
+                <ul class="list">
+                    
+                </ul>            
+            </div>
+    
+            <div class="new-arivals">
+                <h3 class="heading">Fresh at Licious!</h3>
+                <p class="sub-heading">Handpicked assortment just for you</p>
+                <ul class="arrival-list">
+                    
+                </ul>
+            </div>
+            <div class="cards combos">
+                <h3 class="heading">Combos for you</h3>
+                <p class="sub-heading">Savour the savings!</p>
+                <ul class="list">
+    
+                </ul>            
+            </div>
+            <div class="cards budget">
+                <h3 class="heading budget-heading">Rs 199 or lower!</h3>
+                <ul class="list">
+    
+                </ul>
+            </div>
+            <div class="cards breakfast-meat">
+                <h3 class="heading breakfast-heading">Your go-to breakfast meat</h3>
+                <ul class="list">
+    
+                </ul>
+            </div>
+            <div class="cards boneless-cuts">
+                <h3 class="heading delicious-heading">Delicious boneless cuts</h3>
+                <ul class="list">
+                    
+                </ul>
+            </div>
+            <div class="cards top-rated">
+                <h3 class="heading top-rated-heading">Top Rated</h3>
+                <p class="sub-heading">by meat-lovers like you!</p>
+                <ul class="list">
+                    
+                </ul>
+            </div>
+
+            <div class="cart-pop-up">
+
+            </div>
+
+            <div class="about-service">
+                    
+            </div>
+            <footer>
+                <div class="footer">
+    
+                </div>
+                <div class="cities-we-serve">
+    
+                </div>
+                <div class="popular-searches">
+    
+                </div>
+                <div class="copyright-section">
+    
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* mobile screens */
+@media only screen and (max-width: 769px) {
+    .container {
+        overflow-y: auto;
+    }
+    .navbar {
+        flex-basis: 96%;
+        padding: 1% 2%;
+    }
+    .logo , .categories, .login, .cart{
+        display: none;
+    }
+    .location {
+        flex-basis: 40%;
+    }
+    .main-container {
+        width: 92%;
+        margin: 6% 4%;
+    }
+    .banner-bg {
+        height:170px;
+    }
+
+    .shop-by-best-sellers-now {
+        padding: 20px;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .shop-by-best-sellers-now .search-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .back {
+        display: flex;
+    }
+
+    .back .heading {
+        display: flex;
+        width: fit-content;
+    }
+
+    .shop-by-best-sellers-now i {
+        font-size: 20px;
+        display: inline-block;
+        display: flex;
+        align-items: center;
+    }
+
+    .category {
+        width: 85%;
+        margin: auto;
+        padding: 0% 3%;
+    }
+
+    .category-tag {
+        font-size: smaller;
+    }
+
+    .category ul {
+        margin: 10px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+
+    .category ul li {
+        text-align: center;
+        padding: 10px 0px;
+        width: 120px;
+        margin: auto;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+
+    .category ul li img {
+        width: 50px;
+        display: flex;
+        align-items: baseline;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+}

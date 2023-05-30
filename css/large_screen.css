@@ -1,0 +1,51 @@
+
+@media only screen and (min-width: 901px) {
+    
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+
+    .navbar {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-evenly;
+    }
+
+    .banner {
+        width: 95%;
+    }
+    .drop-down {
+        display: none;
+    }
+
+    /* drop down categories  */
+    .category {
+        width: 95%;
+        margin: 30px auto;
+        padding: 0% 3%;  
+    }
+
+    .sub-heading {
+        font-size: smaller;
+    }
+
+    .category ul {
+        margin: 20px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category ul li {
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .category ul li img {
+        width: 150px;
+        display: block;
+    }
+
+}
