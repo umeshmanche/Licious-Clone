@@ -295,7 +295,9 @@ function removeItem(id, value) {
     const price_tag = $(".total");
     const curr_price = $(".check-out-price");
 
-    curr_price.innerText = cartValue[1];
+    if(curr_price != null) {
+        curr_price.innerText = cartValue[1];
+    }
     const cart_div = $(".cart-list");
     if(price_tag != null && cart_items.length == 0) {
         price_tag.remove();

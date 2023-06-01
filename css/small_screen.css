@@ -1,0 +1,62 @@
+/* tablet screens */
+
+@media only screen and (min-width:631px) and (max-width:768px) {
+    .header {
+        margin: 0%;
+        padding: 20px 10px;
+    }    
+    .navbar {
+        flex-basis : 100%;
+        justify-content: space-between;
+    }
+    .search-bar {
+        max-width: 180px;
+       flex-shrink: 3.5;
+    }
+    .location {
+        display: none;
+    }
+
+    .drop-down {
+        display: none;
+    }
+
+    .banner {
+        width: 100%;
+    }
+    .category {
+        width: 96%;
+        margin: auto;
+        padding: 0% 3%;
+    }
+
+    .category-tag {
+        font-size: smaller;
+    }
+
+    .category ul {
+        margin: 10px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .category ul li {
+        text-align: center;
+        padding: 10px 0px;
+        cursor: pointer;
+        margin: auto 4.2%;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+
+    .category ul li img {
+        width: 95px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}

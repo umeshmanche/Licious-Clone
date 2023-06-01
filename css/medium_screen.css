@@ -1,57 +1,55 @@
-/* tablet screens */
 
-@media only screen and (max-width : 900px) {
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    
+    .container {
+        width: 100%;
+        margin: auto;
+    }
     .header {
-        margin: 0%;
-    }    
+        margin: auto;
+        padding: 20px 4%;
+        
+    }  
     .navbar {
-        flex-basis : 100%;
-        justify-content: space-between;
-    }
-    .search-bar {
-        max-width: 180px;
-       flex-shrink: 3.5;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-evenly;
     }
 
+    .banner {
+        width: 95%;
+    }
     .drop-down {
         display: none;
     }
 
-    .banner {
-        width: 100%;
-    }
+    /* drop down categories  */
     .category {
-        width: 92%;
-        margin: auto;
-        padding: 0% 3%;
+        width: 95%;
+        margin: 30px auto;
+        padding: 0% 3%;  
     }
 
-    .category-tag {
+    .sub-heading {
         font-size: smaller;
     }
 
     .category ul {
-        margin: 10px;
+        margin: 20px;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .category ul li {
         text-align: center;
-        padding: 10px 0px;
-        cursor: pointer;
-        margin: auto 4.2%;
-        margin-bottom: 5px;
-        justify-content: center;
+        padding: 10px;
+        margin: auto;
     }
 
     .category ul li img {
-        width: 95px;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        margin-bottom: 10px;
+        width: 100px;
+        display: block;
     }
+
 }

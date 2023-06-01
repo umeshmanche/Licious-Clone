@@ -1,5 +1,4 @@
 /* mobile screens */
-/* mobile screens */
 @media only screen and (max-width: 480px) {
     
     .header {
@@ -17,11 +16,11 @@
         padding: 1% 2%;
         justify-content: space-between;
     }
-    .logo , .categories, .login, .cart, .location{
+    .categories, .login, .location{
         display: none;
     }
     .search-bar {
-        flex-basis: 64%;
+        flex-basis: 40%;
     }
     .main-container {
         width: 96%;
