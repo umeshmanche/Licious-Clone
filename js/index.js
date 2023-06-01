@@ -263,7 +263,7 @@ function removeItem(id, value) {
     cart_items[index2] = value[index];
     
     // checking if the quantity is equals to 0 then removing the item from cart 
-    if(value[index].quantity == 0) {
+    if(value[index].quantity <= 0) {
         cart_items= cart_items.filter(item => item.id!==id);
     }
 
