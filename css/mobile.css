@@ -13,14 +13,17 @@
     }
     .navbar {
         flex-basis: 96%;
-        padding: 1% 2%;
+        padding: 3% 2%;
         justify-content: space-between;
     }
     .categories, .login, .location{
         display: none;
     }
+    .logo{
+        flex-basis: 61px;
+    }
     .search-bar {
-        flex-basis: 40%;
+        flex-basis: 53%;
     }
     .main-container {
         width: 96%;
