@@ -224,7 +224,8 @@ function removeItem(id, value) {
     id = id.id.substring(7);
     
     const remove_btn = $("#remove_"+id);
-    const quantity = $("#quantity_"+id);
+    // const quantity = $("#quantity_"+id);
+    const quantity = document.querySelectorAll("#quantity_"+id);
     const empty_cart = $(".cart");
     const non_empty_cart = $(".non-empty-cart");
     const item_count = $(".count");
@@ -248,22 +249,27 @@ function removeItem(id, value) {
     if(cart_item != null) {
         quan[0].textContent--;
         quan[1].textContent--;
-        if(quan[0].textContent < 1) {
+        if(quan[0].textContent < 1 && quan[1].textContent < 1) {
             quan[0].style.dispaly = "none";
             quan[1].style.dispaly = "none";
-            quantity.style.display = "none";
+            quantity[0].style.display = "none";
+            quantity[1].style.display = "none";
+            remove_btn.style.display = "none";
             cart_item.remove();
         }
     }
-    else if(quantity.textContent >= 1){
-        quantity.textContent--;
+    else if(quantity[0].textContent >= 1){
+        quantity[0].textContent--;
+        if(quantity[1] != null && quantity[1] >= 1) {
+            quantity[1].textContent--;
+        }
     }
 
     // updating it in the cart 
     cart_items[index2] = value[index];
     
     // checking if the quantity is equals to 0 then removing the item from cart 
-    if(value[index].quantity <= 0) {
+    if(value[index].quantity < 1) {
         cart_items= cart_items.filter(item => item.id!==id);
     }
 
@@ -271,9 +277,9 @@ function removeItem(id, value) {
     localStorage.setItem("cart", JSON.stringify(cart_items));
 
     // hiding the remove button if quantity becomes 0
-    if(quantity.textContent < 1) {
+    if(quantity[0].textContent < 1) {
         remove_btn.style.display = "none";
-        quantity.style.display = "none";
+        quantity[0].style.display = "none";
     }
 
     // updating the quantity in the cart button
@@ -301,8 +307,6 @@ function removeItem(id, value) {
     const cart_div = $(".cart-list");
     if(price_tag != null && cart_items.length == 0) {
         price_tag.remove();
-        // cart_div.innerHTML = ( `<ul class="items-list" id="items-list"></ul>
-        // <p class="no-items">Cart is Empty...</p>`);
     }
 }
 
