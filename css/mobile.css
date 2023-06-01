@@ -1,21 +1,35 @@
 /* mobile screens */
-@media only screen and (max-width: 769px) {
+/* mobile screens */
+@media only screen and (max-width: 480px) {
+    
+    .header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        padding: 3px, 10px;
+    }
     .container {
         overflow-y: auto;
+        position: static;
     }
     .navbar {
         flex-basis: 96%;
         padding: 1% 2%;
+        justify-content: space-between;
     }
-    .logo , .categories, .login, .cart{
+    .logo , .categories, .login, .cart, .location{
         display: none;
     }
-    .location {
-        flex-basis: 40%;
+    .search-bar {
+        flex-basis: 64%;
     }
     .main-container {
-        width: 92%;
-        margin: 6% 4%;
+        width: 96%;
+        margin: 60px 2% 6% 2%;
+    }
+    .main-container .banner {
+        width: 98%;
+        margin: 1%;
     }
     .shop-by-best-sellers-now {
         padding: 20px;
@@ -46,8 +60,8 @@
     }
 
     .category {
-        width: 85%;
-        margin: auto;
+        width: 96%;
+        margin: 2%;
         padding: 0% 3%;
     }
 
@@ -66,10 +80,11 @@
     .category ul li {
         text-align: center;
         padding: 10px 0px;
-        width: 120px;
+        width: 80px;
         margin: auto;
         cursor: pointer;
         margin-bottom: 5px;
+        font-size: 10px;
     }
 
     .category ul li img {
@@ -86,5 +101,16 @@
     }
     .fresh-at-licious {
         width: 273px;
+    }
+
+    .cart-container {
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        height: 100vh;
+        overflow: auto;
+    }
+    .blur-filter {
+        filter: blur(0px);
     }
 }
